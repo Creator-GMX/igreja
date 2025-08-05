@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
@@ -14,9 +14,9 @@
         }
 
         :root {
-            /* Paleta de cores baseada na imagem */
-            --primary-color: #bec092; /* Darker shade from image */
-            --secondary-color: #f8fbca; /* Lighter shade from image */
+            /* Paleta de cores baseada nas instruções */
+            --color-bec092: #bec092;
+            --color-f8fbca: #f8fbca;
             --heavenly-blue: #1e3a8a;
             --divine-blue: #2563eb;
             --celestial-blue: #3b82f6;
@@ -59,7 +59,7 @@
             min-height: 100vh;
             overflow-x: hidden;
             position: relative;
-            color: var(--primary-color);
+            color: var(--color-bec092);
         }
 
         /* Fundo Celestial Animado */
@@ -141,7 +141,7 @@
         /* Cruz Decorativa */
         .cross-decoration {
             font-size: 3rem;
-            color: var(--secondary-color);
+            color: var(--color-f8fbca);
             margin-bottom: 25px;
             animation: holyFloat 6s ease-in-out infinite;
             filter: drop-shadow(var(--holy-shadow));
@@ -175,8 +175,10 @@
         .title {
             font-size: clamp(2.5rem, 6vw, 4.5rem);
             font-weight: 800;
-            color: var(--secondary-color);
-            text-shadow: 0 4px 8px rgba(15, 23, 42, 0.4), 0 8px 16px rgba(30, 58, 138, 0.2);
+            color: var(--color-f8fbca);
+            text-shadow: 
+                0 4px 8px rgba(15, 23, 42, 0.4),
+                0 8px 16px rgba(30, 58, 138, 0.2);
             margin-bottom: 20px;
             letter-spacing: -0.02em;
             line-height: 1.1;
@@ -198,7 +200,7 @@
 
         .subtitle {
             font-size: clamp(1.1rem, 2.5vw, 1.5rem);
-            color: var(--primary-color);
+            color: var(--color-bec092);
             text-shadow: 0 2px 4px rgba(15, 23, 42, 0.3);
             margin-bottom: 50px;
             font-weight: 500;
@@ -232,13 +234,16 @@
             50% { opacity: 1; transform: translateY(-50%) scale(1.2); }
         }
 
+        /* Card Celestial */
         .divine-card {
             background: rgba(255, 255, 255, 0.12);
             backdrop-filter: blur(25px);
             border-radius: 32px;
             padding: 60px 50px;
             border: 2px solid rgba(255, 255, 255, 0.2);
-            box-shadow: var(--divine-shadow), inset 0 1px 2px rgba(255, 255, 255, 0.15);
+            box-shadow: 
+                var(--divine-shadow),
+                inset 0 1px 2px rgba(255, 255, 255, 0.15);
             position: relative;
             overflow: hidden;
         }
@@ -273,10 +278,12 @@
 
         .holy-date {
             font-size: clamp(3rem, 8vw, 5rem);
-            color: var(--secondary-color);
+            color: var(--color-f8fbca);
             font-weight: 900;
             margin-bottom: 20px;
-            text-shadow: 0 4px 8px rgba(15, 23, 42, 0.4), 0 8px 16px rgba(30, 58, 138, 0.2);
+            text-shadow: 
+                0 4px 8px rgba(15, 23, 42, 0.4),
+                0 8px 16px rgba(30, 58, 138, 0.2);
             letter-spacing: -0.03em;
             position: relative;
             z-index: 2;
@@ -290,20 +297,22 @@
             letter-spacing: 1px;
             position: relative;
             z-index: 2;
-            color: var(--primary-color);
+            color: var(--color-bec092);
         }
 
+        /* Aplicando as cores específicas para palavras */
         .church-name .igreja-word {
-            color: var(--primary-color);
+            color: var(--color-bec092);
         }
 
         .church-name .jardim-word {
-            color: var(--secondary-color);
+            color: var(--color-f8fbca);
         }
 
+        /* Botão Sagrado */
         .sacred-btn {
             background: var(--pure-gradient);
-            color: var(--primary-color);
+            color: var(--heavenly-blue);
             border: none;
             padding: 22px 55px;
             border-radius: 60px;
@@ -318,7 +327,9 @@
             display: inline-block;
             position: relative;
             overflow: hidden;
-            box-shadow: var(--divine-shadow), inset 0 2px 4px rgba(255, 255, 255, 0.4);
+            box-shadow: 
+                var(--divine-shadow),
+                inset 0 2px 4px rgba(255, 255, 255, 0.4);
             margin: 35px 0;
             z-index: 2;
         }
@@ -330,7 +341,10 @@
             left: -100%;
             width: 100%;
             height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(30, 58, 138, 0.1), transparent);
+            background: linear-gradient(90deg, 
+                transparent, 
+                rgba(30, 58, 138, 0.1), 
+                transparent);
             transition: left 0.8s ease;
         }
 
@@ -349,7 +363,9 @@
 
         .sacred-btn:hover {
             transform: translateY(-6px);
-            box-shadow: 0 35px 70px -12px rgba(30, 58, 138, 0.4), inset 0 2px 4px rgba(255, 255, 255, 0.5);
+            box-shadow: 
+                0 35px 70px -12px rgba(30, 58, 138, 0.4),
+                inset 0 2px 4px rgba(255, 255, 255, 0.5);
             color: var(--divine-blue);
         }
 
@@ -367,6 +383,7 @@
             transition: all 0.1s ease;
         }
 
+        /* Seção de Localização Divina */
         .blessed-location {
             margin-top: 45px;
             text-align: center;
@@ -376,7 +393,7 @@
 
         .location-icon {
             font-size: 2.2rem;
-            color: var(--secondary-color);
+            color: var(--color-f8fbca);
             margin-bottom: 20px;
             filter: drop-shadow(0 2px 4px rgba(245, 158, 11, 0.3));
             animation: locationPulse 3s ease-in-out infinite;
@@ -389,7 +406,7 @@
 
         .location-city {
             font-weight: 700;
-            color: var(--secondary-color);
+            color: var(--color-f8fbca);
             font-size: 1.3rem;
             margin-bottom: 12px;
             text-shadow: 0 2px 4px rgba(245, 158, 11, 0.3);
@@ -397,7 +414,7 @@
         }
 
         .location-address {
-            color: var(--primary-color);
+            color: var(--color-bec092);
             font-size: 1rem;
             font-weight: 500;
             text-shadow: 0 2px 4px rgba(15, 23, 42, 0.3);
@@ -405,6 +422,7 @@
             letter-spacing: 0.5px;
         }
 
+        /* Elementos Flutuantes Divinos */
         .divine-particles {
             position: absolute;
             top: 0;
@@ -454,12 +472,25 @@
         }
 
         @keyframes divineFloat {
-            0%, 100% { transform: translateY(0px) translateX(0px) scale(1); opacity: 0.4; }
-            25% { transform: translateY(-30px) translateX(15px) scale(1.5); opacity: 1; }
-            50% { transform: translateY(-10px) translateX(-20px) scale(0.8); opacity: 0.7; }
-            75% { transform: translateY(-25px) translateX(10px) scale(1.2); opacity: 0.9; }
+            0%, 100% { 
+                transform: translateY(0px) translateX(0px) scale(1);
+                opacity: 0.4;
+            }
+            25% { 
+                transform: translateY(-30px) translateX(15px) scale(1.5);
+                opacity: 1;
+            }
+            50% { 
+                transform: translateY(-10px) translateX(-20px) scale(0.8);
+                opacity: 0.7;
+            }
+            75% { 
+                transform: translateY(-25px) translateX(10px) scale(1.2);
+                opacity: 0.9;
+            }
         }
 
+        /* Responsividade Sagrada */
         @media (max-width: 768px) {
             .divine-card {
                 padding: 45px 35px;
@@ -510,6 +541,7 @@
             }
         }
 
+        /* Customização de Scrollbar Divina */
         ::-webkit-scrollbar {
             width: 10px;
         }
@@ -529,15 +561,18 @@
             background: linear-gradient(135deg, var(--grace-gold) 0%, var(--glory-gold) 100%);
         }
 
+        /* Seleção de Texto Sagrada */
         ::selection {
             background: rgba(59, 130, 246, 0.3);
-            color: var(--secondary-color);
+            color: var(--color-f8fbca);
         }
 
         ::-moz-selection {
             background: rgba(59, 130, 246, 0.3);
-            color: var(--secondary-color);
+            color: var(--color-f8fbca);
         }
+
+        /* Seção adicional inspirada no design das imagens */
     </style>
 </head>
 <body>
